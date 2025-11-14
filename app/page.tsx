@@ -1,14 +1,9 @@
-import { Button } from "@/components/ui/button";
+import React from 'react'
 
-const Page = () => {
+const page = () => {
   return (
-    <div className="px-10 py-10">
-      <div className="text-3xl font-semibold">
-        Welcome To My Saas Application
-      </div>
-      <Button>Explore now..</Button>
-    </div>
-  );
-};
+    <div>page</div>
+  )
+}
 
-export default Page;
+export default page
