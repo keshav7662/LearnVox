@@ -7,12 +7,12 @@ const Navbar = () => {
     <nav className="navbar">
       <Link href='/'>
         <div className="cursor-pointer">
-          <Image src= "/images/logo.svg" alt="logo" width={150} height={150}/>
+          <Image src="/images/logo.svg" alt="logo" width={80} height={20} />
         </div>
       </Link>
       <div className="flex items-center gap-8">
-      <NavItems/>
-      <p>Sign In</p>
+        <NavItems />
+        <p>Sign In</p>
       </div>
     </nav>
   )
