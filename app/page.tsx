@@ -11,7 +11,7 @@ const page = () => {
         <CompanionCard
           id='123'
           subject='Science'
-          title='Neura the Brainy Explorer  '
+          name='Neura the Brainy Explorer  '
           topic='Neural Network of the Brain'
           color='#E5D0FF'
           duration={23}
@@ -19,7 +19,7 @@ const page = () => {
         <CompanionCard
           id='123'
           subject='Maths'
-          title='Countsy the Number Wizard'
+          name='Countsy the Number Wizard'
           topic='Derivatives & Integrals'
           color='#FFDA6E'
           duration={30}
@@ -27,7 +27,7 @@ const page = () => {
         <CompanionCard
           id='123'
           subject='Language'
-          title='Verba the Vocabulary Builder'
+          name='Verba the Vocabulary Builder'
           topic='English Literature'
           color='#BDE7FF'
           duration={45}
