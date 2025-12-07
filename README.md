@@ -1,36 +1,95 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# LearnVox - AI Teaching & Learning Platform
 
-## Getting Started
+![LearnVox Banner](./public/images/og-image.png)
 
-First, run the development server:
+LearnVox is a modern, real-time AI-powered teaching and learning platform designed for corporate training and educational institutions. It leverages AI companions to deliver personalized, interactive lessons with voice capabilities.
+
+## 🌟 Features
+
+- **AI-Powered Companions** — Create and manage intelligent AI teaching assistants with customizable personalities, teaching styles, and subject expertise
+- **Real-Time Voice Interaction** — Engage with AI companions through voice input and receive immediate, conversational responses
+- **Rich Lesson Library** — Browse and filter lessons by subject, topic, and difficulty
+- **Bookmark Management** — Save favorite lessons for quick access later
+- **Session History** — Track your learning progress with complete session records
+- **Responsive Design** — Seamless experience across desktop, tablet, and mobile devices
+- **User Authentication** — Secure sign-in with Clerk authentication
+- **Subscription Plans** — Flexible pricing with companion creation limits
+
+## 🚀 Getting Started
+
+### Prerequisites
+
+- Node.js 18+
+- npm or yarn
+- Supabase account
+- Clerk account for authentication
+
+### Installation
+
+1. **Clone the repository:**
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+git clone https://github.com/keshav7662/LearnVox.git
+cd LearnVox
 ```
+2. **Install dependencies:**
+```bash
+npm install
+```
+3. **Set up environment variables:**
+Create a .env.local file in the root directory and add:
+```bash
+# Clerk Authentication
+NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY=your_clerk_publishable_key
+CLERK_SECRET_KEY=your_clerk_secret_key
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+# Clerk - Custom Auth
+NEXT_PUBLIC_CLERK_SIGN_IN_URL=/sign-in
+NEXT_PUBLIC_CLERK_SIGN_IN_FALLBACK_REDIRECT_URL=/
+NEXT_PUBLIC_CLERK_SIGN_UP_FALLBACK_REDIRECT_URL=/
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+# Supabase
+NEXT_PUBLIC_SUPABASE_URL=your_supabase_url
+NEXT_PUBLIC_SUPABASE_ANON_KEY=your_supabase_anon_key
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+# Vapi (Voice API)
+NEXT_PUBLIC_VAPI_TOKEN=your_vapi_token
+```
+4. **Run the development server:**
+```bash
+npm run dev
+```
+5. **Open in browser:**
+```bash
+Navigate to http://localhost:3000
+```
+6. **Build for production:**
 
-## Learn More
+```bash
+npm run build
+npm start
+```
+7. **Project Structure:**
+```bash
+├── app/               # Next.js App Router
+├── components/        # Reusable UI + features
+├── hooks/             # Custom hooks
+├── lib/               # Supabase, Clerk, Vapi utilities
+├── styles/            # Global styling
+├── public/            # Static assets (logo, banner, etc.)
+└── README.md
+```
+## 🛠️ Tech Stack
 
-To learn more about Next.js, take a look at the following resources:
+#### **Frontend**: Next.js 14 (App Router), React 18, TypeScript  
+#### **Styling**: Tailwind CSS, PostCSS  
+#### **UI Components**: shadcn/ui, Radix UI  
+#### **Backend**: Next.js Server Actions  
+#### **Database**: Supabase (PostgreSQL)  
+#### **Authentication**: Clerk  
+#### **Voice**: Vapi SDK  
+#### **Forms & Validation**: React Hook Form, Zod  
+#### **Deployment**: Vercel
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.

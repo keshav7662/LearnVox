@@ -17,6 +17,27 @@ export const metadata: Metadata = {
     template: "%s | LearnVox",
   },
   description: "LearnVox: The future of corporate training and learning with a real-time AI teaching platform.",
+  openGraph: {
+    title: "LearnVox - AI Teaching & Learning Platform",
+    description: "Interactive AI-powered lessons with real-time voice interaction",
+    url: "https://learnvox.com",
+    siteName: "LearnVox",
+    images: [
+      {
+        url: "/images/og-image.png",
+        width: 1200,
+        height: 630,
+        alt: "LearnVox Platform",
+      },
+    ],
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "LearnVox - AI Teaching & Learning Platform",
+    description: "Interactive AI-powered lessons with real-time voice interaction",
+    images: ["/images/og-image.png"],
+  },
 };
 
 export default function RootLayout({
