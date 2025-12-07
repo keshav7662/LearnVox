@@ -20,7 +20,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "LearnVox - AI Teaching & Learning Platform",
     description: "Interactive AI-powered lessons with real-time voice interaction",
-    url: "https://learnvox.com",
+    url: "https://learnvox.vercel.app/",
     siteName: "LearnVox",
     images: [
       {
