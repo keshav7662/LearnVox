@@ -7,6 +7,7 @@ import {
   TableRow,
 } from "@/components/ui/table"
 import { cn, getSubjectColor } from "@/lib/utils";
+import { ArrowUpRight } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -30,7 +31,7 @@ const CompanionList = ({ title, companions, classNames }: CompanionListProps) =>
         </TableHeader>
         <TableBody>
           {companions?.map(({ id, name, subject, topic, duration }, index) => (
-            <TableRow key={`${id}-${index}`}>
+            <TableRow key={`${id}-${index}`} className="group">
               <TableCell>
                 <Link href={`companions/${id}`}>
                   <div className="flex items-center gap-2">
@@ -38,7 +39,11 @@ const CompanionList = ({ title, companions, classNames }: CompanionListProps) =>
                       <Image src={`/icons/${subject}.svg`} alt="subject" width={35} height={35} />
                     </div>
                     <div className="flex flex-col gap-2">
-                      <p className="font-bold text-2xl">{name}</p>
+                      <div className="flex gap-4 items-center">
+                        <p className="font-bold text-2xl">{name}</p>
+                        <ArrowUpRight className="h-5 w-5 opacity-0 group-hover:opacity-100 transition-opacity" />
+                      </div>
+
                       <p className="text-lg">{topic}</p>
                     </div>
                   </div>

@@ -10,7 +10,7 @@ import { currentUser } from "@clerk/nextjs/server"
 import Image from "next/image";
 import { redirect } from "next/navigation";
 
-const ProfilePage = async () => {
+const MyJourneyPage = async () => {
 
   const user = await currentUser();
   if (!user) redirect('/sign-in');
@@ -85,4 +85,4 @@ const ProfilePage = async () => {
   )
 }
 
-export default ProfilePage
+export default MyJourneyPage

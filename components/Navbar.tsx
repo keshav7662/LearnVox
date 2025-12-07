@@ -6,10 +6,14 @@ import { SignedIn, SignedOut, SignInButton, UserButton } from "@clerk/nextjs"
 const Navbar = () => {
   return (
     <nav className="navbar">
-      <Link href='/'>
-        <div className="cursor-pointer">
-          <Image src="/images/logo.svg" alt="logo" width={80} height={20} />
-        </div>
+      <Link href="/" className="flex items-center gap-2 group rounded-full">
+        <Image
+          src="/images/logo.svg"
+          alt="logo"
+          width={60}
+          height={20}
+          className="rounded-full"
+        />
       </Link>
       <div className="flex items-center gap-8">
         <NavItems />

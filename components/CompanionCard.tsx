@@ -1,6 +1,7 @@
 "use client";
 
 import { addToBookmark, removeBookmark } from "@/lib/actions/companion.action";
+import { ArrowRight } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
@@ -66,8 +67,9 @@ const CompanionCard = ({ id, subject, name, topic, color, duration, bookmarked: 
         <p className="text-sm">{duration} minutes</p>
       </div>
       <Link href={`/companions/${id}`} className="w-full">
-        <button className="btn-primary w-full justify-center">
+        <button className="btn-primary w-full justify-center rounded-full bg-foreground transition-all duration-200 hover:gap-3 hover:opacity-90">
           Launch Lesson
+          <ArrowRight className="h-4 w-4" />
         </button>
       </Link>
     </article>
