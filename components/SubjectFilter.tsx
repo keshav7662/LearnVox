@@ -38,7 +38,7 @@ const SubjectFilter = () => {
     <Select onValueChange={handleChange} value={selectedSubject}>
       <SelectTrigger className="w-[180px] relative border border-black rounded-lg 
       flex items-center gap-2 px-2 py-1 h-fit">
-        <SelectValue placeholder="Select a fruit" />
+        <SelectValue placeholder="Select a subject" />
       </SelectTrigger>
       <SelectContent>
         {subjects.map((subject) => (

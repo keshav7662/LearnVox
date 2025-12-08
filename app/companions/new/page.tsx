@@ -14,7 +14,7 @@ const NewCompanion = async () => {
   return (
     <main className="w-full md:w-3/4 lg:w-1/2 xl:w-2/5 items-center justify-center">
       {canCreateCompanion ? (
-        <article className="w-full">
+        <article className="w-full px-4 md:px-0">
           <CompanionForm />
         </article>
       ) : (<article className="companion-limit">
@@ -25,7 +25,7 @@ const NewCompanion = async () => {
         <h1>You've Reached Your Limit</h1>
         <p>You've reached your companion creation limit. Upgrade to create more companions and access premium features.</p>
         <Link href='/subscription' className="btn-primary w-full justify-center">
-            Upgrade My Plan
+          Upgrade My Plan
         </Link>
       </article>)}
     </main>
