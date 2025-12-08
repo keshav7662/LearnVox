@@ -4,7 +4,7 @@ import Image from "next/image"
 import Link from "next/link"
 import NavItems, { navItems } from "./NavItems"
 import { SignedIn, SignedOut, SignInButton, UserButton } from "@clerk/nextjs"
-import { useState } from "react"
+import { useState, useEffect } from "react"
 import { Menu, X } from "lucide-react"
 
 const Navbar = () => {
@@ -13,6 +13,18 @@ const Navbar = () => {
   const handleSidebar = () => {
     setOpen(!open);
   }
+
+  useEffect(() => {
+    if (open) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = 'unset';
+    }
+
+    return () => {
+      document.body.style.overflow = 'unset';
+    };
+  }, [open]);
 
   return (
     <>
@@ -50,7 +62,7 @@ const Navbar = () => {
 
       {open && (
         <div
-          className="fixed inset-0 bg-black/20 bg-opacity-50 z-40 md:hidden"
+          className="fixed inset-0 bg-black/80 bg-opacity-50 z-40 md:hidden"
           onClick={handleSidebar}
         />
       )}
@@ -82,6 +94,7 @@ const Navbar = () => {
               </Link>
             ))}
           </nav>
+
           <div className="mt-auto p-6 border-t border-gray-200">
             <SignedOut>
               <SignInButton>
